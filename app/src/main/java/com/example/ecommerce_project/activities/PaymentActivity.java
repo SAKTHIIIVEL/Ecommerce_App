@@ -3,6 +3,7 @@ package com.example.ecommerce_project.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -74,7 +75,8 @@ public class PaymentActivity extends AppCompatActivity {
                         }
                     }).start();
                     Toast.makeText(PaymentActivity.this, "Order Placed! Check your Email.", Toast.LENGTH_LONG).show();
-                    finish();
+                    Intent intent = new Intent(PaymentActivity.this, HomepageActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(PaymentActivity.this, "User not logged in!", Toast.LENGTH_LONG).show();
                 }
